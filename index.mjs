@@ -33,8 +33,10 @@ if (process.env.SECRET)
 
 
 app.get("/", (req, res) => {
-  if (req.oidc)
+  if (req.oidc) {
     res.cookie("session", req.oidc.user.sub);
+    console.log(req.oidc.user)
+  }
   res.sendFile(join(__dirname, "dist", "index.html"));
 });
 

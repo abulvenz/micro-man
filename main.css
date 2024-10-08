@@ -153,3 +153,38 @@ h3 {
 pre {
     color: white
 }
+
+
+.team_chart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .team_member {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .name {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  
+  .role {
+    color: #666;
+  }
+  
+  .reports {
+    margin-top: 10px;
+    padding-left: 20px;
+    border-left: 2px solid #ddd;
+  }
+  

@@ -2,11 +2,10 @@ import m from "mithril";
 import tagl from "tagl-mithril";
 import io from "socket.io/client-dist/socket.io";
 const { trunc } = Math;
-const { div, ul, li, h1, h3, form, input, button, table, tr, td, pre } =
+const { span, div, ul, li, h1, h3, form, input, button, table, tr, td, pre } =
   tagl(m);
 const messages = [];
 const use = (v, f) => f(v);
-
 
 const socket = io();
 
@@ -109,7 +108,6 @@ const userListC = (vnode) => ({
             { onclick: () => socket.emit("game", { user: u }) },
             "Challenge"
           )
-
         )
       )
     ),
@@ -134,7 +132,6 @@ const chatC = (vnode) => ({
   ],
 });
 
-
 m.mount(document.body, {
   view: (vnode) => [
     [m(userListC), m(chatC)],
@@ -142,3 +139,4 @@ m.mount(document.body, {
     // pre(ownid + "\n" + JSON.stringify(game, null, 2)),
   ],
 });
+
